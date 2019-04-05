@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/back">
+        <file>Images/Images/1.jpg</file>
+    </qresource>
+</RCC>

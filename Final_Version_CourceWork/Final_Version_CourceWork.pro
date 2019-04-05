@@ -28,26 +28,24 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     client.cpp \
-    client.cpp \
-    main.cpp \
-    mainwindow.cpp
+    serchwindow.cpp
 
 HEADERS += \
         mainwindow.h \
     client.h \
-    client.h \
-    mainwindow.h
+    serchwindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    serchwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    ../../Desktop/black-wa.jpg
+#DISTFILES += \
+#    ../../Desktop/black-wa.jpg
 
 RESOURCES += \
-    image.qrc
+    res.qrc

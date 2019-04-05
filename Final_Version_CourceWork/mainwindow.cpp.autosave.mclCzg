@@ -12,8 +12,10 @@ MainWindow::MainWindow(QWidget *parent) :
     serch = new SerchWindow(this);
 
 
-    QPixmap *backgnd = new QPixmap(":/new/back/Images/Images/1.jpg");
+    QPixmap *backgnd = new QPixmap("C:\\Users\\azaza\\Documents\\Final_Version_CourceWork\\Images\\Images\\1.jpg");
     QPalette *palette = new QPalette;
+    //QSize *sz = new QSize(this->size());
+    //backgnd->scaled(*sz, Qt::AspectRatioMode::IgnoreAspectRatio, Qt::TransformationMode::SmoothTransformation);
     palette->setBrush(QPalette::Window, QBrush(*backgnd));
     this->setPalette(*palette);
 
@@ -26,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_7->setStyleSheet("color: rgb(171, 171, 171)");
     ui->label_8->setStyleSheet("color: rgb(171, 171, 171)");
     ui->lineEdit_number->setValidator(new QDoubleValidator(0, 100, 2, this));
-
+    //client = new Client*[50];
 
 
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -62,7 +64,7 @@ void MainWindow::on_pushButton_clicked()
 
 
         QTableWidgetItem *item = new QTableWidgetItem();
-        item->setText(client_vector[counter]->getFirstName());
+        item->setText(client_vector[counter]->getNumber());
         ui->tableWidget->setItem(counter1, 0, item);
 
 
@@ -75,7 +77,7 @@ void MainWindow::on_pushButton_clicked()
         ui->tableWidget->setItem(counter1, 2, item2);
 
         QTableWidgetItem *item3 = new QTableWidgetItem();
-        item3->setText(this->client_vector[counter]->getNumber());
+        item3->setText(this->client_vector[counter]->getFirstName());
         ui->tableWidget->setItem(counter1, 3, item3);
 
         QTableWidgetItem *item4 = new QTableWidgetItem();
@@ -100,7 +102,7 @@ void MainWindow::on_tableWidget_cellPressed(int row, int column)
 
 void MainWindow::on_pushButton_2_clicked()
 {
-
+    //int counter1 = static_cast<short>(counter);
     ui->tableWidget->removeRow(chosed_row);
     if(counter == 0 )
     {
@@ -116,15 +118,9 @@ void MainWindow::on_pushButton_2_clicked()
         }
         rows.erase(--rows.end());
         ui->tableWidget->setVerticalHeaderLabels(rows);
-        if (counter=0){
 
-        }
-        else {
-
-
-        client_vector.erase(client_vector.begin()+ static_cast<short>(counter));
+       // client_vector.erase(client_vector.begin() + counter1);
         counter--;
-        }
         }
 }
 

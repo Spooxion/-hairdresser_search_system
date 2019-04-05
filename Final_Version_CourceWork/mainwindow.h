@@ -12,6 +12,8 @@
 #include <QMenu>
 #include <QHeaderView>
 #include <vector>
+#include "serchwindow.h"
+
 
 namespace Ui {
 class MainWindow;
@@ -36,14 +38,16 @@ private slots:
 
 
 
-private:
-    Ui::MainWindow *ui;
-    Client **client;
+    void on_pushButton_3_clicked();
 
+private:
+      Ui::MainWindow *ui;
+      //Client **client;
+      std::vector <Client*> client_vector;
       QStringList columns;
       QStringList rows;
-
-      int counter = 0;
+      SerchWindow *serch;
+      unsigned int counter = 0;
       int chosed_column;
       int chosed_row;
 

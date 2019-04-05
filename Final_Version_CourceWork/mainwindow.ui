@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>603</height>
+    <width>1146</width>
+    <height>493</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,7 +22,7 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="comboBox_serch">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -79,7 +84,7 @@
       <x>730</x>
       <y>180</y>
       <width>95</width>
-      <height>65</height>
+      <height>69</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -167,13 +172,18 @@
      <rect>
       <x>724</x>
       <y>10</y>
-      <width>250</width>
-      <height>140</height>
+      <width>331</width>
+      <height>165</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
      <item row="0" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Фамилия:</string>
        </property>
@@ -255,14 +265,45 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_serch">
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>330</y>
+      <y>360</y>
       <width>131</width>
       <height>21</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>201</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Укажите, что вы ищете:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>390</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Поиск</string>
     </property>
    </widget>
   </widget>
@@ -271,8 +312,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1000</width>
-     <height>26</height>
+     <width>1146</width>
+     <height>29</height>
     </rect>
    </property>
   </widget>
