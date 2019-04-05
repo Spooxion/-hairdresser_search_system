@@ -1,0 +1,52 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QMessageBox>
+#include <QPixmap>
+#include <iostream>
+#include "client.h"
+#include <QLineEdit>
+#include <QMenu>
+#include <QHeaderView>
+#include <vector>
+
+namespace Ui {
+class MainWindow;
+}
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+
+private slots:
+    void on_pushButton_clicked();
+
+    void on_tableWidget_cellPressed(int row, int column);
+
+    void on_pushButton_2_clicked();
+
+
+
+
+
+private:
+    Ui::MainWindow *ui;
+    Client **client;
+
+      QStringList columns;
+      QStringList rows;
+
+      int counter = 0;
+      int chosed_column;
+      int chosed_row;
+
+};
+
+#endif // MAINWINDOW_H

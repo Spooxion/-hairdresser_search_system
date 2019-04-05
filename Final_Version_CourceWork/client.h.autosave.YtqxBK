@@ -1,0 +1,47 @@
+#ifndef CLIENT_H
+#define CLIENT_H
+
+#include <iostream>
+#include<QString>
+#include <QLineEdit>
+
+class Client
+{
+private:
+    QString first_name;
+    QString last_name;
+    QString third_name;
+    QString last_service;
+    int number;
+
+protected:
+
+public:
+    Client(QString First_name, QString Last_name, QString Third_name, int Number, QString Last_service){
+        first_name= First_name;
+        last_name=Last_name;
+        third_name=Third_name;
+        number=Number;
+        last_service=Last_service;
+    };
+    void setFirstName(QString First_name){
+        first_name=First_name;
+    }
+    void setLastName(QString Lirst_name){
+        last_name=Lirst_name;
+    }
+    void setThirdName(QString Third_name){
+        third_name=Third_name;
+    }
+    void setLastService(QString Last_service){
+        last_service=Last_service;
+    }
+    void setNumber (int Number){
+        number=Number;
+    }
+ };
+
+
+
+
+#endif // CLIENT_H
