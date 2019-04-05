@@ -7,8 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
     serch = new SerchWindow(this);
+
 
     QPixmap *backgnd = new QPixmap(":/new/back/Images/Images/1.jpg");
     QPalette *palette = new QPalette;
@@ -27,18 +29,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_10->setStyleSheet("color: rgb(171, 171, 171)");
     ui->lineEdit_number->setValidator(new QDoubleValidator(0, 100, 2, this));
 
-    QDate date1= QDate::currentDate();
-    ui->comboBox_data->addItem("");
-    ui->comboBox_data->addItem(date1.toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+1).toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+2).toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+3).toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+4).toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+5).toString("dd/MM/yy"));
-    ui->comboBox_data->addItem(date1.addDays(+6).toString("dd/MM/yy"));
+    QDate datetoday;
+    datetoday.currentDate();
+    ui->comboBox_data->addItem(datetoday.currentDate().toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(datetoday.currentDate(datetoday.day(datatoday.day-1)).toString("dd/MM/yy"));
+    
 
 
-
+    ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
 MainWindow::~MainWindow()

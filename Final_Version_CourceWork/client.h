@@ -9,31 +9,37 @@ class Client
 {
 private:
     QString first_name;
-    QString last_name;
     QString third_name;
     QString last_service;
     QString number;
+    QString data;
+    QString time;
+    QString cost;
 
 
 protected:
 
 public:
 
-    Client(QString First_name, QString Last_name, QString Third_name, QString Number, QString Last_service);
+    Client(QString First_name, QString Third_name, QString Number, QString Last_service,QString Data,QString Time,QString Cost);
     Client();
     ~Client();
 
     void setFirstName(QString First_name);
-    void setLastName(QString Lirst_name);
     void setThirdName(QString Third_name);
     void setLastService(QString Last_service);
     void setNumber (QString Number);
+    void setData (QString Data);
+    void setTime (QString Time);
+    void setCost (QString Cost);
 
     QString getFirstName();
-    QString getLastName();
     QString getThirdName();
-    QString getNumber();
     QString getLastService();
+    QString getNumber();
+    QString getData();
+    QString getTime();
+    QString getCost();
  };
 
 

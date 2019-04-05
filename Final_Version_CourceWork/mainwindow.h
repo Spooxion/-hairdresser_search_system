@@ -13,6 +13,8 @@
 #include <QHeaderView>
 #include <vector>
 #include "serchwindow.h"
+#include <QDate>
+#include <QTime>
 
 
 namespace Ui {
@@ -42,11 +44,11 @@ private slots:
 
 private:
       Ui::MainWindow *ui;
-      //Client **client;
       std::vector <Client*> client_vector;
       QStringList columns;
       QStringList rows;
       SerchWindow *serch;
+
       unsigned int counter = 0;
       int chosed_column;
       int chosed_row;
