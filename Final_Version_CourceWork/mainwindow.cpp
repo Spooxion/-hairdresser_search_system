@@ -27,7 +27,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->label_10->setStyleSheet("color: rgb(171, 171, 171)");
     ui->lineEdit_number->setValidator(new QDoubleValidator(0, 100, 2, this));
 
-    QDate date1= QDate::currentDate();
+    QDateTime date1 = QDateTime::currentDateTime();
+    if ((date1.time().hour() >= 19) && (date1.time().minute() >= 29))
+    {
+    ui->comboBox_data->addItem("");
+    ui->comboBox_data->addItem(date1.addDays(+1).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+2).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+3).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+4).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+5).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+6).toString("dd/MM/yy"));
+    ui->comboBox_data->addItem(date1.addDays(+7).toString("dd/MM/yy"));
+    }
+    else
+    {
     ui->comboBox_data->addItem("");
     ui->comboBox_data->addItem(date1.toString("dd/MM/yy"));
     ui->comboBox_data->addItem(date1.addDays(+1).toString("dd/MM/yy"));
@@ -36,6 +49,34 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->comboBox_data->addItem(date1.addDays(+4).toString("dd/MM/yy"));
     ui->comboBox_data->addItem(date1.addDays(+5).toString("dd/MM/yy"));
     ui->comboBox_data->addItem(date1.addDays(+6).toString("dd/MM/yy"));
+    }
+
+    ui->comboBox_time->addItem(" ");
+    ui->comboBox_time->addItem("08:00");
+    ui->comboBox_time->addItem("08:30");
+    ui->comboBox_time->addItem("09:00");
+    ui->comboBox_time->addItem("09:30");
+    ui->comboBox_time->addItem("10:00");
+    ui->comboBox_time->addItem("10:30");
+    ui->comboBox_time->addItem("11:00");
+    ui->comboBox_time->addItem("11:30");
+    ui->comboBox_time->addItem("12:00");
+    ui->comboBox_time->addItem("12:30");
+    ui->comboBox_time->addItem("13:00");
+    ui->comboBox_time->addItem("13:30");
+    ui->comboBox_time->addItem("14:00");
+    ui->comboBox_time->addItem("14:30");
+    ui->comboBox_time->addItem("15:00");
+    ui->comboBox_time->addItem("15:30");
+    ui->comboBox_time->addItem("16:00");
+    ui->comboBox_time->addItem("16:30");
+    ui->comboBox_time->addItem("17:00");
+    ui->comboBox_time->addItem("17:30");
+    ui->comboBox_time->addItem("18:00");
+    ui->comboBox_time->addItem("18:30");
+    ui->comboBox_time->addItem("19:00");
+    ui->comboBox_time->addItem("19:30");
+
 
 
 
@@ -147,5 +188,29 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
+    QString serch1 = ui->lineEdit_serch->text();
+    if (ui->comboBox_serch->currentIndex() == 0){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 1){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 2){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 3){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 4){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 5){
+
+    }
+    if (ui->comboBox_serch->currentIndex() == 6){
+
+    }
     serch->show();
+
+
 }

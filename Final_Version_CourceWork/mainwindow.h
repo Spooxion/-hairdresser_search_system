@@ -15,6 +15,7 @@
 #include "serchwindow.h"
 #include <QDate>
 #include <QTime>
+#include <QDateTime>
 
 
 namespace Ui {
@@ -35,10 +36,6 @@ private slots:
     void on_tableWidget_cellPressed(int row, int column);
 
     void on_pushButton_2_clicked();
-
-
-
-
 
     void on_pushButton_3_clicked();
 

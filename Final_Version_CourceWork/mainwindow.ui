@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1146</width>
+    <width>923</width>
     <height>559</height>
    </rect>
   </property>
@@ -119,7 +119,7 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>881</width>
+      <width>891</width>
       <height>238</height>
      </rect>
     </property>
@@ -180,7 +180,7 @@
        </column>
        <column>
         <property name="text">
-         <string>Cтоимость</string>
+         <string>Cтоимость (₽)</string>
         </property>
        </column>
       </widget>
@@ -243,17 +243,17 @@
        </item>
        <item>
         <property name="text">
-         <string>     Cтрижка </string>
+         <string>Cтрижка </string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>    Прическа</string>
+         <string>Прическа</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>      Укладка</string>
+         <string>Укладка</string>
         </property>
        </item>
        <item>
@@ -263,7 +263,7 @@
        </item>
        <item>
         <property name="text">
-         <string> Окрашивание</string>
+         <string>Окрашивание</string>
         </property>
        </item>
       </widget>
@@ -341,33 +341,13 @@
      <string>Поиск</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_startwork">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>280</y>
-      <width>113</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_endwork">
-    <property name="geometry">
-     <rect>
-      <x>950</x>
-      <y>310</y>
-      <width>113</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1146</width>
+     <width>923</width>
      <height>26</height>
     </rect>
    </property>
