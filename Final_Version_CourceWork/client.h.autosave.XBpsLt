@@ -7,7 +7,7 @@
 
 class Client
 {
-
+    
 private:
     QString first_name;
     QString third_name;
@@ -16,7 +16,7 @@ private:
     QString data;
     QString time;
     QString cost;
-
+    
 public:
     Client(QString First_name, QString Third_name, QString Number, QString Last_service,QString Data,QString Time,QString Cost);
     Client();
@@ -38,5 +38,8 @@ public:
     QString getTime();
     QString getCost();
  };
+
+
+
 
 #endif // CLIENT_H

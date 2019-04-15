@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>923</width>
-    <height>559</height>
+    <width>953</width>
+    <height>671</height>
    </rect>
   </property>
   <property name="font">
@@ -22,98 +22,6 @@
    <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QComboBox" name="comboBox_serch">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>300</y>
-      <width>131</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Имя</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Отчество</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Номер телефона</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Услуга</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Дата</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Время</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Стоимость</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>270</y>
-      <width>221</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>10</pointsize>
-      <weight>50</weight>
-      <italic>true</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Укажите параметр поиска:</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>290</y>
-      <width>95</width>
-      <height>69</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Добавить</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>Удалить</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
@@ -131,7 +39,7 @@
          <family>Sitka Banner</family>
          <pointsize>16</pointsize>
          <weight>75</weight>
-         <italic>true</italic>
+         <italic>false</italic>
          <bold>true</bold>
         </font>
        </property>
@@ -150,37 +58,87 @@
       <widget class="QTableWidget" name="tableWidget">
        <column>
         <property name="text">
-         <string>Имя</string>
+         <string>Фамилия</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Отчество</string>
+         <string>Имя</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
        </column>
        <column>
         <property name="text">
          <string>Номер </string>
         </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Услуга</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
        </column>
        <column>
         <property name="text">
          <string>Дата</string>
         </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Время</string>
         </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <pointsize>9</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
        </column>
        <column>
         <property name="text">
          <string>Cтоимость (₽)</string>
+        </property>
+        <property name="font">
+         <font>
+          <family>Sitka Text</family>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
        </column>
       </widget>
@@ -190,156 +148,410 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>620</x>
       <y>260</y>
-      <width>331</width>
-      <height>233</height>
+      <width>291</width>
+      <height>311</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_17">
+       <property name="font">
+        <font>
+         <family>Sitka Banner</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
        <property name="text">
-        <string>Имя:</string>
+        <string>Добавление клиента:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit_firstname"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Отчество:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_thirdname"/>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Номер:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_number"/>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Услуга:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="1">
-      <widget class="QComboBox" name="comboBox_lastservice">
-       <item>
-        <property name="text">
-         <string/>
-        </property>
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Фамилия:</string>
+         </property>
+        </widget>
        </item>
-       <item>
-        <property name="text">
-         <string>Cтрижка </string>
-        </property>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_firstname"/>
        </item>
-       <item>
-        <property name="text">
-         <string>Прическа</string>
-        </property>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Имя:</string>
+         </property>
+        </widget>
        </item>
-       <item>
-        <property name="text">
-         <string>Укладка</string>
-        </property>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_thirdname"/>
        </item>
-       <item>
-        <property name="text">
-         <string>Лечение волос</string>
-        </property>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Номер:</string>
+         </property>
+        </widget>
        </item>
-       <item>
-        <property name="text">
-         <string>Окрашивание</string>
-        </property>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_number"/>
        </item>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string>Дата:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QComboBox" name="comboBox_data"/>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="label_10">
-       <property name="text">
-        <string>Время:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="1">
-      <widget class="QComboBox" name="comboBox_time"/>
-     </item>
-     <item row="6" column="0">
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Стоимость:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="1">
-      <widget class="QLineEdit" name="lineEdit_cost"/>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Услуга:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBox_lastservice">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Муж. стрижка </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Жен. стрижка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Прическа</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Укладка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Лечение волос</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Окрашивание</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Дата:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="comboBox_data"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Время:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="comboBox_time"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Стоимость:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="lineEdit_cost"/>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton">
+         <property name="font">
+          <font>
+           <family>Sitka Subheading</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Добавить</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
     </layout>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_serch">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>360</y>
-      <width>131</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>330</y>
-      <width>201</width>
-      <height>16</height>
+      <y>260</y>
+      <width>291</width>
+      <height>311</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <italic>true</italic>
-     </font>
-    </property>
-    <property name="text">
-     <string>Укажите, что вы ищете:</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="font">
+        <font>
+         <family>Sitka Banner</family>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Укажите параметры поиска:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Фамилия:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_firstname_2"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Имя:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_thirdname_2"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Номер:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_number_2"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Услуга:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Дата:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QComboBox" name="comboBox_data_2"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="font">
+          <font>
+           <family>Sitka Subheading</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Время:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QComboBox" name="comboBox_time_2"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="font">
+          <font>
+           <family>Sitka Text</family>
+          </font>
+         </property>
+         <property name="text">
+          <string>Стоимость:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="lineEdit_cost_2"/>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="font">
+          <font>
+           <family>Sitka Subheading</family>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Поиск</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QComboBox" name="comboBox_lastservice_2">
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Муж. стрижка </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Жен. стрижка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Прическа</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Укладка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Лечение волос</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Окрашивание</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>390</y>
-      <width>93</width>
-      <height>28</height>
+      <x>390</x>
+      <y>350</y>
+      <width>126</width>
+      <height>69</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Поиск</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Удалить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_edit_client">
+       <property name="text">
+        <string>Редактировать</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -347,10 +559,20 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>923</width>
+     <width>953</width>
      <height>26</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action_save"/>
+    <addaction name="action_save_as"/>
+    <addaction name="action_open"/>
+    <addaction name="action_close"/>
+   </widget>
+   <addaction name="menu"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -361,6 +583,41 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="text">
+    <string>Создать</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="action_save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="action_save_as">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+  </action>
+  <action name="action_open">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
+  <action name="action_close">
+   <property name="text">
+    <string>Закрыть</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
