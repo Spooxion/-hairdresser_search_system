@@ -51,6 +51,7 @@ private:
     Ui::MainWindow *ui;
     int chosed_column;
     int chosed_row;
+    bool is_project_save = false;
     unsigned int counter = 0;
     QStringList columns;
     QStringList rows;

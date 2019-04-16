@@ -497,34 +497,18 @@ void MainWindow::on_action_save_triggered()
 {
     QStringList save_project;
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
-
     if(file_name=="Новый проект")
     {
-         QString filename = QFileDialog::getSaveFileName(this, tr("Сохранить как"), QDir::currentPath(), tr("File (*.txt)") );
-         qInfo()<< filename;
-         if(!filename.isEmpty()){file_name=filename;}
+         QString my_file = QFileDialog::getSaveFileName(this, tr("Сохранить как"), QDir::currentPath(), tr("File (*.txt)") );
+         if(!my_file.isEmpty()){file_name=my_file;}
     }
 
-    else
-    {
-        for(unsigned int i=0;i<client_vector.size();i++)
+    QFile file(file_name);
+    file.remove();
+   if ((file.open(QIODevice::WriteOnly)))
         {
-            qInfo()<< " save project -> metody";
-            save_project<<client_vector[i]->getFirstName().toUtf8();
-            save_project<<client_vector[i]->getThirdName().toUtf8();
-            save_project<<client_vector[i]->getNumber().toUtf8();
-            save_project<<client_vector[i]->getLastService().toUtf8();
-            save_project<<client_vector[i]->getData().toUtf8();
-            save_project<<client_vector[i]->getTime().toUtf8();
-            save_project<<client_vector[i]->getCost().toUtf8()<<"\r\n";
-        }}
-         qInfo()<< file_name << save_project;
-         QFile file(file_name);
-         if ((file.open(QIODevice::WriteOnly)))
-         {
-            for(unsigned int i=0;i<client_vector.size();i++)
+        for(unsigned int i=0;i<client_vector.size();i++)
             {
-                qInfo()<< " save project -> metody";
                 save_project<<client_vector[i]->getFirstName().toUtf8()<<"\n";
                 save_project<<client_vector[i]->getThirdName().toUtf8()<<"\n";
                 save_project<<client_vector[i]->getNumber().toUtf8()<<"\n";
@@ -536,18 +520,28 @@ void MainWindow::on_action_save_triggered()
             QTextStream stream(&file);
             foreach(QString s, save_project){stream<<s;}
          }
-         file.close();
 
+         file.close();
          show_project();
 }
 
 void MainWindow::on_action_save_as_triggered()
 {
-    on_action_save_triggered();
-    QString filename = QFileDialog::getSaveFileName(this, tr("Сохранить как"), QDir::currentPath(), tr("File (*.txt)") );
-    if(!filename.isEmpty())
+    QStringList save_project;
+    for(unsigned int i=0;i<client_vector.size();i++)
+        {
+            save_project<<client_vector[i]->getFirstName().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getThirdName().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getNumber().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getLastService().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getData().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getTime().toUtf8()<<"\n";
+            save_project<<client_vector[i]->getCost().toUtf8()<<"\n";
+        }
+    QString my_file = QFileDialog::getSaveFileName(this, tr("Сохранить как"), QDir::currentPath(), tr("File (*.txt)") );
+    if(!my_file.isEmpty())
     {
-    QFile young(filename);
+    QFile young(my_file);
     QFile old(file_name);
     old.close();
     young.open(QIODevice::WriteOnly);
@@ -555,7 +549,7 @@ void MainWindow::on_action_save_as_triggered()
     QByteArray my_buf = old.readAll();
     young.write(my_buf);
     young.close();
-    file_name=filename;
+    file_name=my_file;
     show_project();
     QMessageBox::information(this,"Результат","Файл сохранен","ОК");
     }
@@ -563,29 +557,57 @@ void MainWindow::on_action_save_as_triggered()
 
 void MainWindow::on_action_open_triggered()
 {
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
-      QString filename =  QFileDialog::getOpenFileName(this, tr("Открыть"), QDir::currentPath(), tr("File (*.txt)"));
-      QStringList open_project;
-      if(!filename.isEmpty())
-      {
-        qInfo()<< "gotoint";
-        file_name=filename;
-        client_vector.clear();
+        QMessageBox:: StandardButton reply = QMessageBox::question(this,
+                                                                   "Предупреждение","Сохранить текущий проект перед открытием следующего?",
+                                                                   QMessageBox::Yes | QMessageBox::No);
+             if (reply==QMessageBox::Yes)
+             {
+                 on_action_save_triggered();
+                 QMessageBox::information(this,"Результат","Файл сохранен","ОК");
+             }
 
-        QFile file(file_name);
-        if (file.open(QIODevice::ReadOnly))
-        {
 
-          while(!file.atEnd())
-          {
-            open_project<<file.readLine( ) ;
-           }
+                chosed_column = 0;
+                chosed_row = 0;
+                counter = 0;
+                columns.clear();
+                rows.clear();
+                client_vector.clear();
 
-       }
-        file.close();
+                QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
+                QString my_file =  QFileDialog::getOpenFileName(this, tr("Открыть"), QDir::currentPath(), tr("File (*.txt)"));
+                QStringList open_project;
+                if(!my_file.isEmpty())
+                {
+                    file_name=my_file;
+                    client_vector.clear();
+                    QFile file(file_name);
+
+                    if (file.open(QIODevice::ReadOnly))
+                    {
+                    while(!file.atEnd()){open_project<<file.readLine( );}
+                    }
+                    file.close();
 
         for(int i=0;i<open_project.size();i+=7){
-           Client *client1 = new Client(open_project[i],open_project[i+1],open_project[i+2],open_project[i+3],open_project[i+4],open_project[i+5],open_project[i+6]);
+
+           QString firstname1 = open_project[i];
+           QString thirdname1 = open_project[i+1];
+           QString number1 = open_project[i+2];
+           QString lastservice1 = open_project[i+3];
+           QString date1 = open_project[i+4];
+           QString time1 = open_project[i+5];
+           QString cost1 = open_project[i+6];
+
+           firstname1.remove(firstname1.size() - 1, 2);
+           thirdname1.remove(thirdname1.size() - 1, 2);
+           number1.remove(number1.size() - 1, 2);
+           lastservice1.remove(lastservice1.size() - 1, 2);
+           date1.remove(date1.size() - 1, 2);
+           time1.remove(time1.size() - 1, 2);
+           cost1.remove(cost1.size() - 1, 2);
+
+           Client *client1 = new Client(firstname1, thirdname1, number1, lastservice1, date1, time1, cost1);
            client_vector.push_back(client1);
         }
         line_edit_1_clear();
@@ -593,9 +615,16 @@ void MainWindow::on_action_open_triggered()
         show_vector_in_table();
         show_project();
       }
-}
+     }
+
+
 
 void MainWindow::on_action_close_triggered()
 {
+    QMessageBox:: StandardButton reply = QMessageBox::question(this,"Выход","Вы действительно хотите выйти?",QMessageBox::Yes | QMessageBox::No);
+         if (reply==QMessageBox::Yes)
+         {
+             QApplication::quit();
 
+         }
 }

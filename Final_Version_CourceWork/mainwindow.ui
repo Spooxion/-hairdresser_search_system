@@ -244,12 +244,17 @@
          </item>
          <item>
           <property name="text">
-           <string>Муж. стрижка </string>
+           <string>Мужская стрижка</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Жен. стрижка</string>
+           <string>Женская стрижка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Детская стрижка</string>
           </property>
          </item>
          <item>
@@ -270,6 +275,16 @@
          <item>
           <property name="text">
            <string>Окрашивание</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ламинирование волос</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Наращивание волос</string>
           </property>
          </item>
         </widget>
@@ -342,7 +357,7 @@
      <rect>
       <x>20</x>
       <y>260</y>
-      <width>291</width>
+      <width>311</width>
       <height>311</height>
      </rect>
     </property>
@@ -493,12 +508,17 @@
          </item>
          <item>
           <property name="text">
-           <string>Муж. стрижка </string>
+           <string>Мужская стрижка</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Жен. стрижка</string>
+           <string>Женская стрижка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Детская стрижка</string>
           </property>
          </item>
          <item>
@@ -519,6 +539,16 @@
          <item>
           <property name="text">
            <string>Окрашивание</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Ламинирование волос</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Наращивание волос</string>
           </property>
          </item>
         </widget>
